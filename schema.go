@@ -434,7 +434,8 @@ func shouldBeReferenced(schema *openapi3.Schema) bool {
 var normalizer = strings.NewReplacer("/", "_",
 	".", "_",
 	"[", "_",
-	"]", "_")
+	"]", "_",
+	"*", "_")
 
 func (api *API) normalizeTypeName(pkgPath, name string) string {
 	var omitPackage bool
